@@ -1,13 +1,2 @@
-#!/usr/bin/env julia
-using Pkg;
-
-# Add support for various MIMI models
-Pkg.Registry.add(RegistrySpec(url = "https://github.com/mimiframework/MimiRegistry.git"));
-
-Pkg.add.([
-    Pkg.PackageSpec(;name="MimiFUND", version="3.8.6"),
-    Pkg.PackageSpec(;name="MimiIWG", version="1.1.0")
-]);
-
-# Precompiling installed packages
-Pkg.precompile();
+# streamlit launches at startup
+mv streamlit_call.py ${NB_PYTHON_PREFIX}/lib/python*/site-packages/
